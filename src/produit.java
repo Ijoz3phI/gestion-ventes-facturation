@@ -1,4 +1,4 @@
-public class produit {
+public class Produit {
 
      private int idproduit;
     private String nom;
@@ -6,7 +6,7 @@ public class produit {
     private double tva;
     private int stock;
 
-public produit (int idproduit, String nom, double prixHT, double tva, int stock) {
+public Produit (int idproduit, String nom, double prixHT, double tva, int stock) {
     this.idproduit = idproduit;
     this.nom = nom;
     this.prixHT = prixHT;
