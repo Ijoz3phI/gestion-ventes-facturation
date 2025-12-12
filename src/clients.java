@@ -1,13 +1,41 @@
 public class clients {
-    private String nom;
+    private int id;
     private String prenom;
-    private int num ;
+    private String nom;
+    private String email;
     
 
-    public clients(String nom, int num, String prenom) {
+    public clients(String nom, int id, String prenom,String email) {
         this.nom = nom;
-        this.num = num;
+        this.id = id;
         this.prenom = prenom;
+        this.email=email;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getPrenom() {
+        return prenom;
+    }
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 }
