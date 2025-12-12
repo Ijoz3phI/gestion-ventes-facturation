@@ -6,7 +6,7 @@ public class Clients {
     private String email;
     
 
-    public clients(String nom, int id, String prenom,String email,int num_tel) {
+    public Clients(String nom, int id, String prenom,String email,int num_tel) {
         this.nom = nom;
         this.id = id;
         this.prenom = prenom;
