@@ -11,7 +11,7 @@ public class clients {
         this.id = id;
         this.prenom = prenom;
         this.email=email;
-        this.num_tel = num_tel;ig
+        this.num_tel = num_tel;
     }
     public int getId() {
         return id;
