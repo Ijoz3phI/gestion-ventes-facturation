@@ -1,6 +1,6 @@
 package com.gestionventes.model;
 
-public class Client {
+public class Client {                   // il s agit de la creation de la class client rien de plus
     private int id ;
     private String nom ;
     private String prenom ;
