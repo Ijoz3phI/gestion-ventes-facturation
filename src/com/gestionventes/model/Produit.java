@@ -22,4 +22,8 @@ public class Produit {
     public int getStock() { return stock; }
     public void setStock(int stock) { this.stock = stock; }
 
+     @Override
+    public String toString() {
+        return "ID=" + id + " | Libelle=" + libelle + " | Prix=" + prix + " | Stock=" + stock;
+    }
 }
