@@ -1,6 +1,6 @@
-package facturation.model;
+package com.gestionventes.model;
 
-import model.Client;
+import com.gestionventes.model.Client;
 import java.util.ArrayList;
 
 public class Facture {
