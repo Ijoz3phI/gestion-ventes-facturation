@@ -1,4 +1,4 @@
-package facturation.dao;
+package com.gestionventes.dao;
 
 import facturation.model.Facture;
 import java.util.ArrayList;
