@@ -1,6 +1,6 @@
-package facturation.dao;
+package com.gestionventes.dao; //modification du package
 
-import facturation.model.Facture;
+import com.gestionventes.model.Facture; //modification de l import
 import java.util.ArrayList;
 
 public class FactureDAO {
