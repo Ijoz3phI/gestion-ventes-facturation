@@ -1,6 +1,7 @@
 package com.gestionventes.service;
 
 import com.gestionventes.dao.ClientDAO;
+import com.gestionventes.model.Client;
 
 import java.util.List;
 import java.util.Optional;
