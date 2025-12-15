@@ -35,7 +35,7 @@ public class ClientController {
                 case 3 -> modifier();
                 case 4 -> supprimer();
                 case 0 -> {}
-                default -> System.out.println("Choix invalide !");
+
             }
         } while (choix != 0);
     }
