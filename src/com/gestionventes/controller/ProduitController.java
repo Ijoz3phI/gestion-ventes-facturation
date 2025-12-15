@@ -2,7 +2,6 @@ package com.gestionventes.controller;
 
 import com.gestionventes.model.Produit;
 import com.gestionventes.service.ProduitService;
-import com.gestionventes.util.Validator;
 
 import java.util.Optional;
 import java.util.Scanner;
