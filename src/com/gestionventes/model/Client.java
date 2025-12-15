@@ -1,18 +1,3 @@
-ackage com.gestionventes.app;
-
-import com.gestionventes.controller.MenuPrincipal;
-
-public class Main {
-    public static void main(String[] args) {
-        new MenuPrincipal().demarrer();
-    }
-}
-=========================
-        📦 MODEL
-=========================
-        ✅ com.gestionventes.model.Client.java
-        java
-Copier le code
 package com.gestionventes.model;
 
 public class Client {
