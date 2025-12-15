@@ -1,7 +1,5 @@
 package com.gestionventes.dao;
 
-import com.gestionventes.model.Client;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

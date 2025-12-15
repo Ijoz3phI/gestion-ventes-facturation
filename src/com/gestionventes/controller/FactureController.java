@@ -1,6 +1,5 @@
 package com.gestionventes.controller;
 
-import com.gestionventes.model.Client;
 import com.gestionventes.model.Facture;
 import com.gestionventes.model.LigneFacture;
 import com.gestionventes.model.Produit;

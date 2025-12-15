@@ -1,6 +1,5 @@
 package com.gestionventes.controller;
 
-import com.gestionventes.model.Client;
 import com.gestionventes.service.ClientService;
 import com.gestionventes.util.Validator;
 
