@@ -4,9 +4,10 @@ import com.gestionventes.model.Client;
 import com.gestionventes.model.Facture;
 import com.gestionventes.model.LigneFacture;
 import com.gestionventes.model.Produit;
+import com.gestionventes.service.ClientService;
 import com.gestionventes.service.FactureService;
 import com.gestionventes.service.ProduitService;
-
+import com.gestionventes.util.Validator;
 import java.time.LocalDate;
 import java.util.Optional;
 import java.util.Scanner;
