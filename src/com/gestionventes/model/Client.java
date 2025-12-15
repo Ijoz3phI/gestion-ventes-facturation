@@ -1,3 +1,18 @@
+ackage com.gestionventes.app;
+
+import com.gestionventes.controller.MenuPrincipal;
+
+public class Main {
+    public static void main(String[] args) {
+        new MenuPrincipal().demarrer();
+    }
+}
+=========================
+        📦 MODEL
+=========================
+        ✅ com.gestionventes.model.Client.java
+        java
+Copier le code
 package com.gestionventes.model;
 
 public class Client {
@@ -6,8 +21,7 @@ public class Client {
     private String email;
     private String telephone;
 
-    public Client() {
-    }
+    public Client() {}
 
     public Client(int id, String nom, String email, String telephone) {
         this.id = id;
@@ -16,37 +30,17 @@ public class Client {
         this.telephone = telephone;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public String getNom() { return nom; }
+    public void setNom(String nom) { this.nom = nom; }
 
-    public String getNom() {
-        return nom;
-    }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
+    public String getTelephone() { return telephone; }
+    public void setTelephone(String telephone) { this.telephone = telephone; }
 
     @Override
     public String toString() {
