@@ -1,32 +1,30 @@
 package com.gestionventes.service;
 
-
-import com.gestionventes.service;
-import facturation.dao.FactureDAO;
-import model.Client;
-import model.Produit;
+import com.gestionventes.dao.FactureDAO;
+import com.gestionventes.model.Facture;
+import java.util.List;
+import java.util.Optional;
 
 public class FactureService {
+    private final FactureDAO dao;
 
-    private FactureDAO factureDAO = new FactureDAO();
-
-    public Facture creerFacture(int id, Client client) {
-        return new Facture(id, client);
+    public FactureService(FactureDAO dao) {
+        this.dao = dao;
     }
 
-    public boolean ajouterProduit(Facture facture, Produit produit, int quantite) {
-        if (produit.getStock() < quantite) {
-            return false;
-        }
-        facture.ajouterLigne(new LigneFacture(produit, quantite));
-        return true;
+    public List<Facture> lister() {
+        return dao.trouverTous();
     }
 
-    public void validerFacture(Facture facture) {
-        for (LigneFacture l : facture.getLignes()) {
-            Produit p = l.getProduit();
-            p.setStock(p.getStock() - l.getQuantite());
-        }
-        factureDAO.save(facture);
+    public Optional<Facture> trouver(int id) {
+        return dao.trouverParId(id);
+    }
+
+    public Facture creer(Facture f) {
+        return dao.ajouter(f);
+    }
+
+    public boolean supprimer(int id) {
+        return dao.supprimer(id);
     }
 }

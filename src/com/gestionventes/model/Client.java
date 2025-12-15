@@ -1,20 +1,19 @@
 package com.gestionventes.model;
 
-public class Client {                   // il s agit de la creation de la class client rien de plus
-    private int id ;
-    private String nom ;
-    private String prenom ;
-    private String telephone ;
-    private String adresse ;
-    private String email ;
+public class Client {
+    private int id;
+    private String nom;
+    private String email;
+    private String telephone;
 
-    public Client(int id, String nom, String prenom, String telephone, String adresse, String email) {
+    public Client() {
+    }
+
+    public Client(int id, String nom, String email, String telephone) {
         this.id = id;
         this.nom = nom;
-        this.prenom = prenom;
-        this.telephone = telephone;
-        this.adresse = adresse;
         this.email = email;
+        this.telephone = telephone;
     }
 
     public int getId() {
@@ -33,12 +32,12 @@ public class Client {                   // il s agit de la creation de la class 
         this.nom = nom;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getTelephone() {
@@ -49,31 +48,12 @@ public class Client {                   // il s agit de la creation de la class 
         this.telephone = telephone;
     }
 
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     @Override
     public String toString() {
-        return "Client{" +
-                "id=" + id +
+        return "Client{id=" + id +
                 ", nom='" + nom + '\'' +
-                ", prenom='" + prenom + '\'' +
-                ", telephone='" + telephone + '\'' +
-                ", adresse='" + adresse + '\'' +
                 ", email='" + email + '\'' +
+                ", telephone='" + telephone + '\'' +
                 '}';
     }
 }

@@ -2,71 +2,44 @@ package com.gestionventes.dao;
 
 import com.gestionventes.model.Client;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
-public class ClientDAO { // cette class est pour la gestion des accee des donnee
-    private ArrayList<Client> clients = new ArrayList<>();
-    private int compteurId = 1;
+public class ClientDAO {
+    private final List<Client> clients = new ArrayList<>();
+    private int sequenceId = 1;
 
-    public Client ajouter(Client client) { //ajout d un nouveau client en incrementant son id
-        Client nouveauClient = new Client(
-                compteurId++,
-                client.getNom(),
-                client.getPrenom(),
-                client.getTelephone(),
-                client.getAdresse(),
-                client.getEmail()
-        );
-        clients.add(nouveauClient);
-        return nouveauClient;
+    public ClientDAO() {
+        // Données de démo
+        ajouter(new Client(0, "Ahmed El Amrani", "ahmed@gmail.com", "0612345678"));
+        ajouter(new Client(0, "Sara Benali", "sara@gmail.com", "0622334455"));
     }
 
-    public ArrayList<Client> findAll() {
-        return new ArrayList<>(clients); //ici je retourne une copie pour proteger mes clients
+    public List<Client> trouverTous() {
+        return new ArrayList<>(clients);
     }
 
-    public Client findById(int id) {
-        for (Client c : clients) {
-            if (c.getId() == id) {
-                return c;
+    public Optional<Client> trouverParId(int id) {
+        return clients.stream().filter(c -> c.getId() == id).findFirst();
+    }
+
+    public Client ajouter(Client c) {
+        c.setId(sequenceId++);
+        clients.add(c);
+        return c;
+    }
+
+    public boolean modifier(Client c) {
+        for (int i = 0; i < clients.size(); i++) {
+            if (clients.get(i).getId() == c.getId()) {
+                clients.set(i, c);
+                return true;
             }
-        }
-        return null;
-    }
-
-    public boolean supprimer(int id) {
-        Client c = findById(id);
-        if (c != null) {
-            clients.remove(c);
-            return true;
         }
         return false;
     }
-    public Client mettreAJour(Client clientModifie) { // mise ajour a mes clients
-        for (int i = 0; i < clients.size(); i++) {
-            Client c = clients.get(i);
-            if (c.getId() == clientModifie.getId()) {
-                c.setNom(clientModifie.getNom());
-                c.setPrenom(clientModifie.getPrenom());
-                c.setTelephone(clientModifie.getTelephone());
-                c.setAdresse(clientModifie.getAdresse());
-                c.setEmail(clientModifie.getEmail());
-                return c;
-            }
-        }
-        return null; // Client non trouvé
-    }
 
-    public ArrayList<Client> findByNom(String nom) {
-        ArrayList<Client> resultats = new ArrayList<>();
-        for (Client c : clients) {
-            if (c.getNom().equalsIgnoreCase(nom)) {
-                resultats.add(c);
-            }
-        }
-        return resultats;
-    }
-    public void clear() {
-        clients.clear();
-        compteurId = 1;
+    public boolean supprimer(int id) {
+        return clients.removeIf(c -> c.getId() == id);
     }
 }

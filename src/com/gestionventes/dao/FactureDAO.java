@@ -1,16 +1,29 @@
-package com.gestionventes.dao; //modification du package
+package com.gestionventes.dao;
 
-import com.gestionventes.model.Facture; //modification de l import
+import com.gestionventes.model.Facture;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class FactureDAO {
-    private ArrayList<Facture> factures = new ArrayList<>();
+    private final List<Facture> factures = new ArrayList<>();
+    private int sequenceId = 1;
 
-    public void save(Facture facture) {
-        factures.add(facture);
+    public List<Facture> trouverTous() {
+        return new ArrayList<>(factures);
     }
 
-    public ArrayList<Facture> findAll() {
-        return factures;
+    public Optional<Facture> trouverParId(int id) {
+        return factures.stream().filter(f -> f.getId() == id).findFirst();
+    }
+
+    public Facture ajouter(Facture f) {
+        f.setId(sequenceId++);
+        factures.add(f);
+        return f;
+    }
+
+    public boolean supprimer(int id) {
+        return factures.removeIf(f -> f.getId() == id);
     }
 }

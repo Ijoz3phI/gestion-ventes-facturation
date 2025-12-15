@@ -1,49 +1,56 @@
 package com.gestionventes.model;
 
-import com.gestionventes.model.Client;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Facture {
     private int id;
     private Client client;
-    private ArrayList<LigneFacture> lignes;
-    public static final double TVA = 0.20;
+    private LocalDate date;
+    private List<LigneFacture> lignes = new ArrayList<>();
 
-    public Facture(int id, Client client) {
+    public Facture() {}
+
+    public Facture(int id, Client client, LocalDate date) {
         this.id = id;
         this.client = client;
-        this.lignes = new ArrayList<>();
+        this.date = date;
     }
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public Client getClient() { return client; }
+    public void setClient(Client client) { this.client = client; }
+
+    public LocalDate getDate() { return date; }
+    public void setDate(LocalDate date) { this.date = date; }
+
+    public List<LigneFacture> getLignes() { return lignes; }
 
     public void ajouterLigne(LigneFacture ligne) {
-        lignes.add(ligne);
+        this.lignes.add(ligne);
     }
 
-    public double calculTotalHT() {
-        double total = 0;
-        for (LigneFacture l : lignes) {
-            total += l.getTotalHT();
-        }
-        return total;
+    public double getTotalHT() {
+        return lignes.stream().mapToDouble(LigneFacture::getTotalHT).sum();
     }
 
-    public double calculTVA() {
-        return calculTotalHT() * TVA;
+    public double getTotalTVA() {
+        return lignes.stream().mapToDouble(LigneFacture::getTotalTVA).sum();
     }
 
-    public double calculTotalTTC() {
-        return calculTotalHT() + calculTVA();
+    public double getTotalTTC() {
+        return lignes.stream().mapToDouble(LigneFacture::getTotalTTC).sum();
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public Client getClient() {
-        return client;
-    }
-
-    public ArrayList<LigneFacture> getLignes() {
-        return lignes;
+    @Override
+    public String toString() {
+        return "Facture{id=" + id +
+                ", client=" + (client != null ? client.getNom() : "N/A") +
+                ", date=" + date +
+                ", totalTTC=" + String.format("%.2f", getTotalTTC()) +
+                '}';
     }
 }
