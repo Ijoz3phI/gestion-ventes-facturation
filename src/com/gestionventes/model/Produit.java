@@ -26,4 +26,4 @@ public class Produit {
     public String toString() {
         return "ID=" + id + " | Libelle=" + libelle + " | Prix=" + prix + " | Stock=" + stock;
     }
-}
+} 
