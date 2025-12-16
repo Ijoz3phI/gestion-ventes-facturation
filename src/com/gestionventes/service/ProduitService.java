@@ -31,4 +31,4 @@ public class ProduitService {
     public boolean supprimer(int id) {
         return dao.supprimer(id);
     }
-}
+} 
