@@ -44,4 +44,4 @@ public class ProduitDAO {
     public boolean supprimer(int id) {
         return produits.removeIf(p -> p.getId() == id);
     }
-}
+} 
