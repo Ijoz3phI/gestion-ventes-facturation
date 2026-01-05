@@ -4,26 +4,60 @@ public class Produit {
 
     private int id;
     private String libelle;
-    private double prix;
-    private int stock;
+    private double prixHT;
+    private double tva; // ex: 0.20 = 20%
 
-    public Produit(int id, String libelle, double prix, int stock) {
+    public Produit() {}
+
+    public Produit(int id, String libelle, double prixHT, double tva) {
         this.id = id;
         this.libelle = libelle;
-        this.prix = prix;
-        this.stock = stock;
+        this.prixHT = prixHT;
+        this.tva = tva;
     }
 
-    public int getId() { return id; }
-    public String getLibelle() { return libelle; }
-    public void setLibelle(String libelle) { this.libelle = libelle; }
-    public double getPrix() { return prix; }
-    public void setPrix(double prix) { this.prix = prix; }
-    public int getStock() { return stock; }
-    public void setStock(int stock) { this.stock = stock; }
+    public int getId() {
+        return id;
+    }
 
-     @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
+
+    public double getPrixHT() {
+        return prixHT;
+    }
+
+    public void setPrixHT(double prixHT) {
+        this.prixHT = prixHT;
+    }
+
+    public double getTva() {
+        return tva;
+    }
+
+    public void setTva(double tva) {
+        this.tva = tva;
+    }
+
+    public double getPrixTTC() {
+        return prixHT * (1 + tva);
+    }
+
+    @Override
     public String toString() {
-        return "ID=" + id + " | Libelle=" + libelle + " | Prix=" + prix + " | Stock=" + stock;
+        return "ID=" + id +
+                " | " + libelle +
+                " | PU HT=" + String.format("%.2f", prixHT) +
+                " | TVA=" + (int)(tva * 100) + "%" +
+                " | PU TTC=" + String.format("%.2f", getPrixTTC());
     }
-} 
+}
