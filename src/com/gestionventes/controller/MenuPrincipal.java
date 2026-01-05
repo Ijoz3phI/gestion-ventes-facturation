@@ -8,7 +8,7 @@ import com.gestionventes.service.FactureService;
 import com.gestionventes.service.ProduitService;
 
 import java.util.Scanner;
-
+// le menu Principal
 public class MenuPrincipal {
 
     private final Scanner scanner = new Scanner(System.in);
