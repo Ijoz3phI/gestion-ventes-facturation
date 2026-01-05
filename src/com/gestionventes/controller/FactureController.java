@@ -11,6 +11,7 @@ import com.gestionventes.util.Validator;
 import java.time.LocalDate;
 import java.util.Optional;
 import java.util.Scanner;
+// la partie FactureCntller
 
 public class FactureController {
     private final Scanner scanner;
