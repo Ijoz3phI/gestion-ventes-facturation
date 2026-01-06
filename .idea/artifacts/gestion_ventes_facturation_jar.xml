@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="gestion-ventes-facturation:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/gestion_ventes_facturation_jar</output-path>
-    <root id="archive" name="gestion-ventes-facturation.jar">
-      <element id="module-output" name="gestion-ventes-facturation" />
-    </root>
-  </artifact>
-</component>
