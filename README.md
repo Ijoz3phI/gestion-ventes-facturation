@@ -146,6 +146,12 @@ src/
 - **Mehdi Ghine**
 - **Anass Bellagrid**
 
+ ---
+
+## 👨‍🏫 Encadré par
+
+- **Youssef Baddi**
+
 
 
 
