@@ -1,4 +1,4 @@
-  Projet : Gestion des Ventes et Facturation
+   ##   Projet : Gestion des Ventes et Facturation*
 
  Description générale
 
@@ -71,10 +71,19 @@ Responsable de **toutes les classes liées aux produits** :
 
 ##  Utilisation de l’application
 
-###  Lancement
+### 🚀 Lancement
+
 L’application peut être lancée de deux manières :
-- via IntelliJ IDEA (`MainUI`)
-- via le fichier exécutable disponible dans la section **Releases** du dépôt GitHub
+
+- **Via IntelliJ IDEA**  
+  Exécuter la classe `MainUI`.
+
+- **Via le fichier exécutable (JAR)**  
+  1. Accéder à la section **Releases** du dépôt GitHub  ou
+  2. Télécharger le fichier exécutable :  
+     👉 https://github.com/Ijoz3phI/gestion-ventes-facturation/releases/download/v1.0/gestion-ventes-facturation.jar  
+  3. Double-cliquer sur le fichier téléchargé  
+  4. L’interface graphique de l’application s’ouvre automatiquement
 
 ---
 
