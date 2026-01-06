@@ -1,9 +1,14 @@
 package com.gestionventes.app;
 
-import com.gestionventes.controller.MenuPrincipal;
+import com.gestionventes.dao.ClientDAO;
+import com.gestionventes.service.ClientService;
+import com.gestionventes.gui.ClientGUI;
+
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        new MenuPrincipal().demarrer();
+        ClientService service = new ClientService(new ClientDAO());
+        SwingUtilities.invokeLater(() -> new ClientGUI(service).setVisible(true));
     }
 }
