@@ -113,6 +113,7 @@ L’application peut être lancée de deux manières :
 ---
 ## 🗂️ Structure du projet
 
+````
 src/
 └─ com/gestionventes/
    ├─ app/        → classe Main (point d’entrée)
@@ -124,7 +125,6 @@ src/
 
 
 
-   
 ````
 
 ---
