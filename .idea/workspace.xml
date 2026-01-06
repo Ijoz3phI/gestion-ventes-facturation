@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="gestion-ventes-facturation:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
@@ -45,6 +50,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Application.MainFX.executor": "Run",
+    "Application.MainUI.executor": "Run",
     "Application.Mainfx.executor": "Run",
     "Application.Unnamed.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -53,11 +59,12 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/pc/Documents/java projects/gestion de ventes et facturation/gestion-ventes-facturation",
-    "project.structure.last.edited": "Modules",
+    "onboarding.tips.debug.path": "C:/Users/pc/Documents/java projects/gestion de ventes et facturation/gestion-ventes-facturation/src/Main.java",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
@@ -66,8 +73,10 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.gestionventes.app.Main" />
-      <module name="gestion_de_ventes_et_facturation" />
+      <module name="gestion-ventes-facturation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.gestionventes.app.*" />
@@ -78,8 +87,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gestionventes.app.MainUI" />
+      <module name="gestion-ventes-facturation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gestionventes.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="gestion-ventes-facturation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="gestion-ventes-facturation" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainUI" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
