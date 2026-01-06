@@ -22,7 +22,7 @@ Une **interface graphique (Java Swing)** a été ajoutée afin d’utiliser l’
 
 Le projet a été réalisé par **trois étudiants**, avec une répartition claire des responsabilités :
 
-### 🔹 👤 Youssef Bsibiss
+### 🔹 👤 Youssef B'sibiss
 Responsable de **toutes les classes liées aux clients** :
 - `Client`
 - `ClientDAO`
