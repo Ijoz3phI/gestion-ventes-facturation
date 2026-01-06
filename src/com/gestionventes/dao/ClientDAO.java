@@ -11,9 +11,6 @@ public class ClientDAO {
     private int sequenceId = 1;
 
     public ClientDAO() {
-        // Données de démo
-        ajouter(new Client(0, "Ahmed El Amrani", "ahmed@gmail.com", "0612345678"));
-        ajouter(new Client(0, "Sara Benali", "sara@gmail.com", "0622334455"));
     }
 
     public List<Client> trouverTous() {
