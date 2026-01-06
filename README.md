@@ -142,7 +142,7 @@ src/
 
 ## 👨‍💻 Auteurs
 
-- **Youssef Bsibiss**
+- **Youssef B'sibiss**
 - **Mehdi Ghine**
 - **Anass Bellagrid**
 
