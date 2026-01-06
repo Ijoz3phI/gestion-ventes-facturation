@@ -114,14 +114,18 @@ L’application peut être lancée de deux manières :
 ## 🗂️ Structure du projet
 
 src/
- └─ com/gestionventes/
-    ├─ app        → classe Main (point d’entrée)
-    ├─ model      → classes métier
-    ├─ dao        → accès aux données
-    ├─ service    → logique métier
-    ├─ controller → gestion des actions
-    └─ ui         → interface graphique (Swing)
-```
+└─ com/gestionventes/
+   ├─ app/        → classe Main (point d’entrée)
+   ├─ model/      → classes métier
+   ├─ dao/        → accès aux données
+   ├─ service/    → logique métier
+   ├─ controller/ → gestion des actions
+   └─ ui/         → interface graphique (Swing)
+
+
+
+   
+````
 
 ---
 
@@ -143,5 +147,5 @@ src/
 - **Anass Bellagrid**
 
 
-## 🗂️ Structure du projet
+
 
